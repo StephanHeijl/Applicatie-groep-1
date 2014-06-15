@@ -1,0 +1,224 @@
+<html>
+	<head>
+		<title> Graph &amp; Interface test </title>
+		<!--jQuery References-->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+		 
+		<!--Theme-->
+		<link href="http://cdn.wijmo.com/themes/metro/jquery-wijmo.css" rel="stylesheet" type="text/css" />
+		 
+		<!--Wijmo Widgets CSS-->
+		<link href="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20131.3.min.css" rel="stylesheet" type="text/css" />
+		 
+		<!--Wijmo Widgets JavaScript-->
+		<script src="http://cdn.wijmo.com/jquery.wijmo-open.all.3.20131.3.min.js" type="text/javascript"></script>
+		<script src="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20131.3.min.js" type="text/javascript"></script>
+		
+		<!--Sigma.js-->
+		<script src="sigma.min.js" /></script>
+		<script src="sigma.parseGexf.js"></script>
+		<script src="sigma.forceatlas2.js"></script>
+		
+		<style>
+			body {
+				font-family: Segoe UI;
+				font-size: 1em;
+			}
+			#graph-wrapper {
+				width: 960px;
+				height: 630px;
+			}
+			
+			#sigma-example {
+				height: 100%;
+				background: white;
+				position:relative;
+				display:inline-block;
+				vertical-align: top;
+			}
+			
+			#sidebar {
+				display: inline-block;
+				vertical-align: top;
+				width: 240px;
+				height: 100%;
+				margin: 0 6px 0 0;
+				float: right;
+			}
+			
+			#sidebar li {
+				list-style-type: none;
+				margin-left: 0em;
+			}
+			
+			#sidebar .legendSquare {
+				width: 1em; 
+				height: 1em;
+				margin-right: 0.8em;
+				margin-top: 0.6em;
+				display: inline-block;
+				line-height: 0.8em;
+				font-weight: bold;
+				font-size: 1.2em;
+				text-align: center;
+				color: rgba(0,0,0,0.6);
+				position:relative;
+			}
+			#sidebar .legendSquare.details { 
+				cursor: pointer;
+			}
+			
+			#buttons {
+				position: absolute;
+				margin: 5px;
+				z-index: 50;
+			}
+
+			/* full screen styles */
+			#sigma-example:full-screen { 
+				min-width: 100%;
+				min-height: 100%;
+				display:block;
+			}			
+			#sigma-example:-webkit-full-screen{ 
+				min-width: 100%;
+				min-height: 100%;
+				display:block;
+			}
+			#overlay {
+				background: rgba(0,0,0,1);
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width:100%;
+				height:100%;
+				display:block;
+				text-align:center;
+				color:white;
+				font-size: 1.5em;
+				z-index: 99999;
+			}
+			#overlay > span {
+				position: relative;
+				margin-top: -1em;
+				top: 50%;
+				height:100%;
+				content:'Loading...';
+				margin-left: -16px;
+			}
+			#loadinginfo {
+				font-size: 0.5em;
+				margin-left: 0px;
+			}
+			#overlay > span > img {
+				vertical-align: bottom;
+			}
+			#nodemenu{
+				position: absolute;
+				display:none;
+				z-index: 9999;
+				background: white;
+				-box-shadow: rgba(0,0,0,0.5) 0 0 10px;
+				text-align:center;
+				padding:5px;				
+			}
+			.wijmo-checkbox {
+				display: inline-block;
+				border-radius: 0;
+			}
+			#sidebar ul {
+				margin:0;
+				padding:0;
+			}
+			#sidebar ul li {
+				position: relative;
+			}
+			
+			#sidebar #legend {
+				margin-bottom: 0.5em;
+			}
+			.articles {
+				font-size: 0.8em;
+				display:block;
+			}
+			.articles a {
+				text-decoration: none;
+			}	
+			.articles li:last-child {
+				text-align:right;
+				padding: 10px;
+			}
+			.articles a:hover {
+				color: #666;
+				text-decoration: none;
+			}
+			
+			.category {
+				cursor: pointer;
+			}
+			
+			.category.visible:after {
+				content: '\2714';
+				position: absolute;
+				top: 0.10em;
+				left:0.175em;
+				font-weight: normal;
+				font-size: 0.9em;
+				color: rgba(0,0,0,0.5);
+				font-family: sans-serif;
+			}
+		</style>	
+		
+	</head>
+	
+	<body>
+		<div id="overlay">
+			<span>
+				<img src="ajax-loader.gif"/>Loading...</span><br/>
+				<span id="loadinginfo"><b style="color:red;">Javascript error - is javascript enabled?</b>
+			</span>
+		</div>
+		
+		<!--Graph size etc should adjust to this size-->
+		<div id="graph-wrapper">
+			<div id="sigma-example">
+		
+				<div id="buttons">
+					<button id="fs_button">Fullscreen</button>
+					<button id="export_image">Export Image</button>
+					<button id="export_xml">Export XML</button>
+				</div>
+				<div id="nodemenu">
+					This is the node menu
+				</div>
+			</div>
+			
+			<div id="sidebar" type="superpanel">
+				<button id="mainview"> Show whole database </button><br/><br/>
+				<select id="threshold">
+					<option readonly>Select edge score threshold.</option>
+					<option value="0"> No threshold </option>
+					<option value="10"> 10th percentile </option>
+					<option value="20"> 20th percentile </option>
+					<option value="30"> 30th percentile </option>
+					<option value="40"> 40th percentile </option>
+					<option value="50"> 50th percentile </option>
+					<option value="60"> 60th percentile </option>
+					<option value="70"> 70th percentile </option>
+					<option value="80"> 80th percentile </option>
+					<option value="90"> 90th percentile </option>
+					<option value="99"> 99th percentile </option>
+				</select>
+				<div id="legend">
+				
+				</div>
+				<div id="nodeinfo">
+					
+				</div>
+			</div>
+		</div>
+		<script src="js.js"></script>
+		<script src="Graph.js"></script>
+	</body>
+</html>

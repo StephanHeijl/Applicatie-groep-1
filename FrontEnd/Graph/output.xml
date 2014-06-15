@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?><gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="edge" mode="static">
+      <attribute id="Negative_Score" title="Negative_Score" type="integer" />
+      <attribute id="edge_color" title="edge_color" type="string" />
+      <attribute id="Score" title="Score" type="integer" />
+      <attribute id="Positive_Score" title="Positive_Score" type="integer" />
+    </attributes>
+    <attributes class="node" mode="static">
+      <attribute id="node_color" title="node_color" type="string" />
+    </attributes>
+    <nodes>
+      <node id="BRCA1" label="BRCA1">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="rs4973768" label="rs4973768">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="BRCA2" label="BRCA2">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="TP53" label="TP53">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="zinc" label="zinc">
+        <attvalues>
+          <attvalue for="node_color" value="#E36549" />
+        </attvalues>
+      </node>
+      <node id="ATM" label="ATM">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="FGFR2" label="FGFR2">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="LSP1" label="LSP1">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="MAP3K1" label="MAP3K1">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="CASP8" label="CASP8">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="PTEN" label="PTEN">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="CHEK2" label="CHEK2">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="iron" label="iron">
+        <attvalues>
+          <attvalue for="node_color" value="#E36549" />
+        </attvalues>
+      </node>
+      <node id="TNRCP" label="TNRCP">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="BRIP1" label="BRIP1">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+      <node id="breast cancer" label="breast cancer">
+        <attvalues>
+          <attvalue for="node_color" value="#C7C7C7" />
+        </attvalues>
+      </node>
+      <node id="PALB2" label="PALB2">
+        <attvalues>
+          <attvalue for="node_color" value="#61CAFF" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="node_color" source="BRCA1" target="BRCA2">
+        <attvalues>
+          <attvalue for="Negative_Score" value="3204" />
+          <attvalue for="edge_color" value="#eb1300" />
+          <attvalue for="Score" value="2705" />
+          <attvalue for="Positive_Score" value="492" />
+        </attvalues>
+      </edge>
+      <edge id="Negative_Score" source="BRCA1" target="TP53">
+        <attvalues>
+          <attvalue for="Negative_Score" value="3826" />
+          <attvalue for="edge_color" value="#eff000" />
+          <attvalue for="Score" value="3050" />
+          <attvalue for="Positive_Score" value="454" />
+        </attvalues>
+      </edge>
+      <edge id="edge_color" source="BRCA1" target="CHEK2">
+        <attvalues>
+          <attvalue for="Negative_Score" value="5290" />
+          <attvalue for="edge_color" value="#ff0000" />
+          <attvalue for="Score" value="3770" />
+          <attvalue for="Positive_Score" value="-2" />
+        </attvalues>
+      </edge>
+      <edge id="Score" source="BRCA1" target="PALB2">
+        <attvalues>
+          <attvalue for="Negative_Score" value="5178" />
+          <attvalue for="edge_color" value="#e51900" />
+          <attvalue for="Score" value="4385" />
+          <attvalue for="Positive_Score" value="1038" />
+        </attvalues>
+      </edge>
+      <edge id="Positive_Score" source="BRCA1" target="ATM">
+        <attvalues>
+          <attvalue for="Negative_Score" value="1822" />
+          <attvalue for="edge_color" value="#26d800" />
+          <attvalue for="Score" value="3555" />
+          <attvalue for="Positive_Score" value="3082" />
+        </attvalues>
+      </edge>
+      <edge id="5" source="BRCA1" target="PTEN">
+        <attvalues>
+          <attvalue for="Negative_Score" value="4472" />
+          <attvalue for="edge_color" value="#e11d00" />
+          <attvalue for="Score" value="3885" />
+          <attvalue for="Positive_Score" value="1016" />
+        </attvalues>
+      </edge>
+      <edge id="6" source="BRCA1" target="zinc">
+        <attvalues>
+          <attvalue for="Negative_Score" value="2534" />
+          <attvalue for="edge_color" value="#c93500" />
+          <attvalue for="Score" value="2475" />
+          <attvalue for="Positive_Score" value="1058" />
+        </attvalues>
+      </edge>
+      <edge id="7" source="BRCA1" target="BRIP1">
+        <attvalues>
+          <attvalue for="Negative_Score" value="3746" />
+          <attvalue for="edge_color" value="#c53900" />
+          <attvalue for="Score" value="3825" />
+          <attvalue for="Positive_Score" value="1670" />
+        </attvalues>
+      </edge>
+      <edge id="8" source="BRCA1" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="3770" />
+          <attvalue for="edge_color" value="#e71700" />
+          <attvalue for="Score" value="3210" />
+          <attvalue for="Positive_Score" value="686" />
+        </attvalues>
+      </edge>
+      <edge id="9" source="BRCA2" target="TP53">
+        <attvalues>
+          <attvalue for="Negative_Score" value="4448" />
+          <attvalue for="edge_color" value="#ee1000" />
+          <attvalue for="Score" value="3505" />
+          <attvalue for="Positive_Score" value="560" />
+        </attvalues>
+      </edge>
+      <edge id="10" source="BRCA2" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="4340" />
+          <attvalue for="edge_color" value="#f68000" />
+          <attvalue for="Score" value="3375" />
+          <attvalue for="Positive_Score" value="284" />
+        </attvalues>
+      </edge>
+      <edge id="11" source="BRCA2" target="PALB2">
+        <attvalues>
+          <attvalue for="Negative_Score" value="4684" />
+          <attvalue for="edge_color" value="#da2400" />
+          <attvalue for="Score" value="4250" />
+          <attvalue for="Positive_Score" value="1348" />
+        </attvalues>
+      </edge>
+      <edge id="12" source="BRCA2" target="ATM">
+        <attvalues>
+          <attvalue for="Negative_Score" value="3674" />
+          <attvalue for="edge_color" value="#986600" />
+          <attvalue for="Score" value="4690" />
+          <attvalue for="Positive_Score" value="2942" />
+        </attvalues>
+      </edge>
+      <edge id="13" source="BRCA2" target="PTEN">
+        <attvalues>
+          <attvalue for="Negative_Score" value="5768" />
+          <attvalue for="edge_color" value="#ec1200" />
+          <attvalue for="Score" value="4610" />
+          <attvalue for="Positive_Score" value="824" />
+        </attvalues>
+      </edge>
+      <edge id="14" source="BRCA2" target="BRIP1">
+        <attvalues>
+          <attvalue for="Negative_Score" value="3420" />
+          <attvalue for="edge_color" value="#d42a00" />
+          <attvalue for="Score" value="3200" />
+          <attvalue for="Positive_Score" value="1140" />
+        </attvalues>
+      </edge>
+      <edge id="15" source="BRCA2" target="CHEK2">
+        <attvalues>
+          <attvalue for="Negative_Score" value="5342" />
+          <attvalue for="edge_color" value="#fe0000" />
+          <attvalue for="Score" value="3800" />
+          <attvalue for="Positive_Score" value="26" />
+        </attvalues>
+      </edge>
+      <edge id="16" source="TP53" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="4438" />
+          <attvalue for="edge_color" value="#f77000" />
+          <attvalue for="Score" value="3370" />
+          <attvalue for="Positive_Score" value="274" />
+        </attvalues>
+      </edge>
+      <edge id="17" source="zinc" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="4398" />
+          <attvalue for="edge_color" value="#ff0000" />
+          <attvalue for="Score" value="3085" />
+          <attvalue for="Positive_Score" value="-54" />
+        </attvalues>
+      </edge>
+      <edge id="18" source="ATM" target="PTEN">
+        <attvalues>
+          <attvalue for="Negative_Score" value="2884" />
+          <attvalue for="edge_color" value="#d72700" />
+          <attvalue for="Score" value="2615" />
+          <attvalue for="Positive_Score" value="892" />
+        </attvalues>
+      </edge>
+      <edge id="19" source="ATM" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="3872" />
+          <attvalue for="edge_color" value="#d72700" />
+          <attvalue for="Score" value="3635" />
+          <attvalue for="Positive_Score" value="1184" />
+        </attvalues>
+      </edge>
+      <edge id="20" source="ATM" target="CHEK2">
+        <attvalues>
+          <attvalue for="Negative_Score" value="3420" />
+          <attvalue for="edge_color" value="#f4a000" />
+          <attvalue for="Score" value="2625" />
+          <attvalue for="Positive_Score" value="276" />
+        </attvalues>
+      </edge>
+      <edge id="21" source="FGFR2" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="4362" />
+          <attvalue for="edge_color" value="#ff0000" />
+          <attvalue for="Score" value="3090" />
+          <attvalue for="Positive_Score" value="-210" />
+        </attvalues>
+      </edge>
+      <edge id="22" source="CASP8" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="4230" />
+          <attvalue for="edge_color" value="#ff0000" />
+          <attvalue for="Score" value="2745" />
+          <attvalue for="Positive_Score" value="-510" />
+        </attvalues>
+      </edge>
+      <edge id="23" source="PTEN" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="4506" />
+          <attvalue for="edge_color" value="#ff0000" />
+          <attvalue for="Score" value="3120" />
+          <attvalue for="Positive_Score" value="-114" />
+        </attvalues>
+      </edge>
+      <edge id="24" source="CHEK2" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="5568" />
+          <attvalue for="edge_color" value="#ff0000" />
+          <attvalue for="Score" value="3915" />
+          <attvalue for="Positive_Score" value="-96" />
+        </attvalues>
+      </edge>
+      <edge id="25" source="iron" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="3414" />
+          <attvalue for="edge_color" value="#f77000" />
+          <attvalue for="Score" value="2610" />
+          <attvalue for="Positive_Score" value="210" />
+        </attvalues>
+      </edge>
+      <edge id="26" source="BRIP1" target="breast cancer">
+        <attvalues>
+          <attvalue for="Negative_Score" value="3728" />
+          <attvalue for="edge_color" value="#cc3200" />
+          <attvalue for="Score" value="3705" />
+          <attvalue for="Positive_Score" value="1472" />
+        </attvalues>
+      </edge>
+      <edge id="27" source="breast cancer" target="PALB2">
+        <attvalues>
+          <attvalue for="Negative_Score" value="5108" />
+          <attvalue for="edge_color" value="#e91500" />
+          <attvalue for="Score" value="4235" />
+          <attvalue for="Positive_Score" value="860" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

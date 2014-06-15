@@ -1,0 +1,8 @@
+<ul id="navigatie">
+	<li><a href="http://cytosine.nl/~owe8_pg1/Applicatie/FrontEnd/index.psp">Home</a></li>
+	<li><a href="http://cytosine.nl/~owe8_pg1/Applicatie/FrontEnd/graphsearch.psp">Database</a></li>
+	<li><a href="http://cytosine.nl/~owe8_pg1/Applicatie/FrontEnd/search.psp">Search</a></li>
+	<li><a href="http://cytosine.nl/~owe8_pg1/Applicatie/FrontEnd/about.html">About</a></li> 
+	<li><a href="http://cytosine.nl/~owe8_pg1/Applicatie/FrontEnd/help.html">Help</a></li>
+	<li><a href="http://cytosine.nl/~owe8_pg1/Applicatie/FrontEnd/contact.html">Contact</a></li>
+</ul>
